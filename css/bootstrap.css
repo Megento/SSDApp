@@ -1,0 +1,56 @@
+html,body{
+    height: 100%;
+}
+#Fehler{
+    color: red;
+    font-weight: 600;
+    white-space: pre-line;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+}
+
+.input-group button[type="submit"] {
+    border: 0;
+    outline: 0;
+    margin-top: 0.65rem;
+    height:1.6rem;
+    border-radius: 8px;
+    border-bottom-left-radius: 8px !important;
+    border-top-left-radius: 8px !important;
+    background-color: black;
+    color: white;
+}
+
+.input-wrap {
+    position: relative;
+    margin-top: .5rem;
+}
+
+.input-wrap label {
+    position: absolute;
+    top: -1.3rem;
+    left: 0;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.input-wrap input {
+    border: 10px;
+    outline: 5px;
+    border-radius: 8px;
+    padding: .2rem .5rem;
+}
+
+.input-wrap input:focus {
+
+}
+
+.error{
+    border: 2px solid red;
+    padding: 5px;
+    border-radius: 5px;
+}

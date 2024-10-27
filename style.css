@@ -1,0 +1,114 @@
+html,body{
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.containerSani{
+    height: auto;
+    background-color: antiquewhite;
+    width: 30rem;
+    margin: 5rem auto;
+    padding:2rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1);
+}
+
+.formSend{
+    margin: auto auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.myForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+}
+
+.input-group button[type="submit"] {
+    border: 0;
+    outline: 0;
+    margin-top: 0.65rem;
+    height:1.6rem;
+    border-radius: 8px;
+    border-bottom-left-radius: 8px !important;
+    border-top-left-radius: 8px !important;
+    background-color: white;
+}
+
+.input-wrap {
+    position: relative;
+    margin-top: .5rem;
+}
+
+.input-wrap label {
+    position: absolute;
+    top: -1.3rem;
+    left: 0;
+    font-weight: 600;
+    font-size: .8rem;
+}
+
+.input-wrap input {
+    border: 0;
+    outline: 0;
+    border-radius: 8px;
+    padding: .2rem .5rem;
+}
+
+.input-wrap input:focus {
+
+}
+
+#fnotes {
+    width: 40vw;
+    height: 100px;
+}
+
+.fpriolabel {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.fpriolabel:hover {
+    cursor: pointer;
+}
+
+#Fehler{
+    color: red;
+    font-weight: 600;
+    white-space: pre-line;
+}
+
+#sendSubmit{
+    margin-top: 1rem;
+}
+
+#headSend{
+    margin-bottom: 2rem;
+}
+
+.error {
+    border: 2px solid red;
+    padding: 5px;
+    border-radius: 5px;
+}
