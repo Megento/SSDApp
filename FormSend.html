@@ -62,14 +62,15 @@
                         
                         <div data-mdb-input-init class="form-floating mb-4">
                           <div data-mdb-input-init class="form-floating mb-4">
-                            <input type="text" id="form2Example22" class="form-control"
+                            <input type="text" id="inputvorfall" class="form-control"
                             placeholder="Vorfall beschreiben" />
-                            <label class="form-label" for="form2Example22">Vorfall beschreiben</label>
+                            <label class="form-label" for="inputvorfall">Vorfall beschreiben</label>
                           </div>
                           <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary" type="button" id="sendButton">
                             Absenden
                           </button>
                           <div class="message bg-success" id="messageDiv">Nachricht wurde versendet!</div>
+                          <div class="message bg-danger" id="messageUnsavedDiv">Nachricht wurde nicht gespeichert!</div>
                           
                         </div>
                         <!-- Button trigger modal -->
@@ -148,8 +149,16 @@
       </section>
 
       <script>
-        document.getElementById('sendButton').addEventListener('click', function() {
-            const messageDiv = document.getElementById('messageDiv');
+        const input = document.getElementById('inputvorfall');
+        const send = document.getElementById('sendButton');
+        const messageDiv = document.getElementById('messageDiv');
+        const unsavedDiv = document.getElementById('messageUnsavedDiv');
+        input.addEventListener('input', function(){
+          messageDiv.style.display = 'none'; // Verstecke die Nachricht
+          unsavedDiv.style.display = 'block';
+        });
+        send.addEventListener('click', function() {
+          unsavedDiv.style.display = 'none';
             // Zeige die Nachricht an, wenn sie versteckt ist
             if (messageDiv.style.display === 'none' || messageDiv.style.display === '') {
                 messageDiv.style.display = 'block'; // Zeige die Nachricht an
