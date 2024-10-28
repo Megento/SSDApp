@@ -64,7 +64,8 @@
 							<a class="nav-link collapsed" href="admin_aktuelle_notfälle.html" aria-expanded="true">
 									<span>Aktuelle Einsätze</span>
 							</a>
-						</li>
+					</li>
+
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -132,10 +133,14 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
+									<style>
+									.white {
+										color:white
+									}
+									</style>
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Liste aller Nutzer</h1>
-                    <p class="mb-4">Hier können Sie als Admin alle Benutzer verwalten indem Sie den jeweiligen Benutzer löschen, das Passwort zurücksetzen oder einen neuen Benutzer erstellen.</p>
+                    <h1 class="h3 mb-2 text-gray-800">Aktueller Plan</h1>
+                    <p class="mb-4">Hier sehen Sie aktuelle Einsätze.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
@@ -144,108 +149,56 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>Nickname</th>                                         
-                                            <th>Typ</th>
-																						<th>Passwort zurücksetzen</th>  
-																						<th>Löschen?</th>
+                                            <th>Standort</th>                                         
+                                            <th>Raumnummer</th>
+																						<th>Anzahl Sanitäter</th>
+																						<th>Backupteam gerufen?</th>
+																						<th>Protokoll</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>Lehrer1</td>
-                                            <td>Lehrer</td>
-																						<td>
-																							<a href="#" class="btn btn-primary btn-icon-split">
-																								<span class="icon text-white-50">
-																										<i class="fas fa-flag"></i>
-																								</span>
-																								<span class="text">Passwort zurücksetzen</span>
-																						</a>
-																						</td>
-
-																						<td>
-                                              <a href="#" class="btn btn-danger btn-circle">
-                                              	<i class="fas fa-trash"></i>
-                                              </a>
-                                            </td>
+																				<tr style="background-color: rgba(224, 57, 16, 0.856);">
+																					<td class="white">Haspel</td>
+																					<td class="white">209</td>
+																					<td class="white">1</td>
+																					<td>
+																						<i class="fas fa-times white"></i>
+																					</td>
+																					<td class="white">Storniert</td>
                                         </tr>
-																				<tr>
-																					<td>Lehrer2</td>
-																					<td>Lehrer</td>
+                                        <tr>
+																					<td>Kothen</td>
+																					<td>1.234</td>
+																					<td>4</td>
 																					<td>
-																						<a href="#" class="btn btn-primary btn-icon-split">
-																							<span class="icon text-white-50">
-																									<i class="fas fa-flag"></i>
-																							</span>
-																							<span class="text">Passwort zurücksetzen</span>
-																					</a>
+																						<i class="fas fa-check" style="color: green;"></i>
 																					</td>
-
 																					<td>
-																						<a href="#" class="btn btn-danger btn-circle">
-																							<i class="fas fa-trash"></i>
-																						</a>
+																						Finger blutet
 																					</td>
-																			</tr>
-																			<tr>
-																				<td>Schüler1</td>
-																				<td>Schüler</td>
-																				<td>
-																					<a href="#" class="btn btn-primary btn-icon-split">
-																						<span class="icon text-white-50">
-																								<i class="fas fa-flag"></i>
-																						</span>
-																						<span class="text">Passwort zurücksetzen</span>
-																				</a>
-																				</td>
-
-																				<td>
-																					<a href="#" class="btn btn-danger btn-circle">
-																						<i class="fas fa-trash"></i>
-																					</a>
-																				</td>
-																		</tr>
-																		<tr>
-																			<td>Lehrer3</td>
-																			<td>Lehrer</td>
-																			<td>
-																				<a href="#" class="btn btn-primary btn-icon-split">
-																					<span class="icon text-white-50">
-																							<i class="fas fa-flag"></i>
-																					</span>
-																					<span class="text">Passwort zurücksetzen</span>
-																			</a>
-																			</td>
-
-																			<td>
-																				<a href="#" class="btn btn-danger btn-circle">
-																					<i class="fas fa-trash"></i>
-																				</a>
-																			</td>
-																	</tr>
-																	<tr>
-																		<td>Schüler2</td>
-																		<td>Schüler</td>
-																		<td>
-																			<a href="#" class="btn btn-primary btn-icon-split">
-																				<span class="icon text-white-50">
-																						<i class="fas fa-flag"></i>
-																				</span>
-																				<span class="text">Passwort zurücksetzen</span>
-																		</a>
-																		</td>
-
-																		<td>
-																			<a href="#" class="btn btn-danger btn-circle">
-																				<i class="fas fa-trash"></i>
-																			</a>
-																		</td>
-																</tr>
+                                        </tr>
+                                        <tr>
+																					<td>Kothen</td>
+																					<td>3.14</td>
+																					<td>2</td>
+																					<td>
+																						<i class="fas fa-times" style="color: red;"></i>
+																					</td>
+																					<td>
+																						Von treppe gestürzt
+																					</td>
+                                        </tr>
+                                        <tr>
+																					<td>Haspel</td>
+																					<td>105</td>
+																					<td>3</td>
+																					<td>
+																						<i class="fas fa-check" style="color: green;"></i>
+																					</td>
+																					<td>Ist im Klassenraum ausgerutscht</td>
+                                        </tr>
                                     </tbody>
                                 </table>
-																<a href="#" class="btn btn-success btn-icon-split">
-																	<span class="text">Neuen Account erstellen</span>
-															</a>
                             </div>
                         </div>
                     </div>
