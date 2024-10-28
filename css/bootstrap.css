@@ -54,3 +54,20 @@ html,body{
     padding: 5px;
     border-radius: 5px;
 }
+
+.gradient-custom-2 {
+    /* fallback for old browsers */
+    background: #fccb90;
+
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, #b9d1da, #3b95be, #745374);
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #b9d1da, #3b95be, #745374);
+}
+
+.logout-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
