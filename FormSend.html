@@ -73,17 +73,41 @@
                           <div class="message bg-danger" id="messageUnsavedDiv">Nachricht wurde nicht gespeichert!</div>
                           
                         </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" onclick="falseSetzen()" data-bs-toggle="modal" data-bs-target="#NotrufMl" id="flexCheckChecked" >
+                          <label class="form-check-label" for="flexCheckChecked">
+                            Notruf abgesetzt
+                          </label>
+                        </div>
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#backupMl">
                           Backupteam rufen
                       </button>
 
-                      
-
                       <!-- Button trigger modal -->
                       <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#SaniMl">
                         Stornieren
                     </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="NotrufMl" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Notruf</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                          Haben Sie wirklich den Notruf angerufen?
+                          </div>
+                          <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="jaGedrückt()">JA</button>
+                          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="neinGedrückt()">NEIEN</button>
+                          
+                          </div>
+                      </div>
+                      </div>
+                  </div>
 
                     <!-- Modal -->
                     <div class="modal fade" id="backupMl" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -153,10 +177,19 @@
         const send = document.getElementById('sendButton');
         const messageDiv = document.getElementById('messageDiv');
         const unsavedDiv = document.getElementById('messageUnsavedDiv');
+        const checkBox = document.getElementById("flexCheckChecked");
         input.addEventListener('input', function(){
           messageDiv.style.display = 'none'; // Verstecke die Nachricht
           unsavedDiv.style.display = 'block';
         });
+        function neinGedrückt(){
+          
+          checkBox.checked = false;
+        }
+        function jaGedrückt(){
+          checkBox.setAttribute("disabled", true);
+          checkBox.checked = true;
+        }
         send.addEventListener('click', function() {
           unsavedDiv.style.display = 'none';
             // Zeige die Nachricht an, wenn sie versteckt ist
@@ -172,6 +205,10 @@
                 }, 500); // 1000 Millisekunden = 1 Sekunde
             }
         });
+
+        function falseSetzen(){
+          checkBox.checked = false;
+        }
       </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

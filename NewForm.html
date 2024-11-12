@@ -60,23 +60,8 @@
                                     <label id="labelRoomnumber" style="color: red;" for="froom">Ort*</label>
                                 </div>
                                 <br>
-                                <div id="sani-div">
-                                    <select class="form-select" name="Sanitäter" id="san">
-                                        <option value="">Anzahl Sanitäter <span style="color:red !important;">*</span></option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5+</option>
-                                    </select>
-                                </div>
                             </div>
                             
-                            
-                            <div class="mb-3">
-                                <label class="fpriolabel" for="fprio">Alle Teams rufen?</label>
-                                <input type="checkbox" name="highpriority" id="fprio">
-                            </div>
         
                             <button type="submit" id="sendSubmit" class="btn btn-primary">Absenden</button>
                             <div id="Fehler"></div>
@@ -89,22 +74,16 @@
       </section>
       <script>
         const room = document.getElementById('froom');
-        const sanitäter = document.getElementById('san');
         const standort = document.getElementById('loc');
         const fehler = document.getElementById('Fehler');
         const submit = document.getElementById('sendSubmit')
-        const saniDiv = document.getElementById('sani-div');
         const locationDiv = document.getElementById('loc-div');
         const roomDiv = document.getElementById('room-div');
         const roomNumber = document.getElementById('labelRoomnumber')
         const inputRoomNumber = document.getElementById('input')
         
-        addColor(san);
         addColor(loc);
-        san.addEventListener("change", function() {
-            addColor(san);
-
-        })
+       
         loc.addEventListener("change",function() {
             addColor(loc);
         })
@@ -155,18 +134,12 @@
         function errors_found() {
             // clear all error classes before adding them
             locationDiv.classList.remove("error");
-            saniDiv.classList.remove("error");
             roomDiv.classList.remove("error");
 
             let isError = false;
             if(!standort.value){
                 locationDiv.classList.add("error");
                 fehler.innerHTML = "- Bitte Standort auswählen. \n";
-                isError = true;
-            }
-            if(!sanitäter.value){
-                saniDiv.classList.add("error");
-                fehler.innerHTML += "- Bitte Sanitäteranzahl auswählen. \n";
                 isError = true;
             }
             if(!inputRoomNumber.value){
