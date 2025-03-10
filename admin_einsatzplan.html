@@ -62,11 +62,11 @@
             </li>
 
 
-						<li class="nav-item">
-							<a class="nav-link collapsed" href="admin_aktuelle_notfälle.html" aria-expanded="true">
-									<span>Aktuelle Einsätze</span>
-							</a>
-						</li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="admin_aktuelle_notfälle.html" aria-expanded="true">
+                        <span>Aktuelle Einsätze</span>
+                </a>
+            </li>
 						
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -263,7 +263,16 @@
 
     <!-- Page level custom scripts
     <script src="js/demo/datatables-demo.js"></script> -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".btn").forEach(button => {
+        button.addEventListener("click", () => {
+            alert("Diese Funktion ist noch nicht verfügbar.");
+        });
+    });
+});
 
+    </script>
 </body>
 
 </html>
